@@ -34,7 +34,7 @@ import info.mastera.leetcode.ListNode;
  */
 public class Solution {
 
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseList1(ListNode head) {
         ListNode previous = null;
         ListNode current = head;
         ListNode next = null;
@@ -45,5 +45,24 @@ public class Solution {
             current = next;
         }
         return previous;
+    }
+
+    public static ListNode reverseList(ListNode root) {
+        if (null == root) {
+            return null;
+        }
+        ListNode previous = null;
+        ListNode current = root;
+        ListNode next = current.next;
+        current.next = previous;
+        previous = current;
+
+        while (null != next) {
+            current = next;
+            next = current.next;
+            current.next = previous;
+            previous = current;
+        }
+        return current;
     }
 }
