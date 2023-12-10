@@ -47,7 +47,7 @@ public class Solution {
         return previous;
     }
 
-    public static ListNode reverseList(ListNode root) {
+    public ListNode reverseList(ListNode root) {
         if (null == root) {
             return null;
         }
