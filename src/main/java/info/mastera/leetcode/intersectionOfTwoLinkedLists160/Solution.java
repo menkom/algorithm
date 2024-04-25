@@ -1,5 +1,7 @@
 package info.mastera.leetcode.intersectionOfTwoLinkedLists160;
 
+import info.mastera.leetcode.ListNode;
+
 import java.util.*;
 
 /**
@@ -66,52 +68,6 @@ import java.util.*;
  * Follow up: Could you write a solution that runs in O(m + n) time and use only O(1) memory?
  */
 public class Solution {
-
-    //      Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-
-        ListNode(int... val) {
-            this.val = val[0];
-            if (val.length > 1) {
-                this.next = new ListNode(Arrays.copyOfRange(val, 1, val.length));
-            }
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-//                    ", next=" + next +
-                    '}';
-        }
-
-        public ListNode setNext(ListNode next) {
-            this.next = next;
-            return this;
-        }
-
-//        @Override
-//        public boolean equals(Object obj) {
-//            if (null == obj) {
-//                return false;
-//            }
-//            if (this == obj) {
-//                return true;
-//            }
-//            if (!getClass().equals(obj.getClass())) {
-//                return false;
-//            }
-//            var that = (ListNode) obj;
-//            return this.val == that.val && (this.next == that.next || this.next.equals(that.next));
-//        }
-    }
 
     public ListNode getIntersectionNode3(ListNode headA, ListNode headB) {
         Set<ListNode> a = new HashSet<>();

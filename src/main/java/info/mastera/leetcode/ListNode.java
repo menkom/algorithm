@@ -1,5 +1,6 @@
 package info.mastera.leetcode;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class ListNode {
@@ -16,6 +17,21 @@ public class ListNode {
     public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
+    }
+
+    public ListNode(int... val) {
+        if (val.length == 0) {
+            return;
+        }
+        this.val = val[0];
+        if (val.length > 1) {
+            this.next = new ListNode(Arrays.copyOfRange(val, 1, val.length));
+        }
+    }
+
+    public ListNode setNext(ListNode next) {
+        this.next = next;
+        return this;
     }
 
     @Override

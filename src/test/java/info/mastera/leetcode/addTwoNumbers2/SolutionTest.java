@@ -1,5 +1,6 @@
 package info.mastera.leetcode.addTwoNumbers2;
 
+import info.mastera.leetcode.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
