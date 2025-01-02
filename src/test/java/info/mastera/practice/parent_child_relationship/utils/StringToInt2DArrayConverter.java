@@ -1,4 +1,4 @@
-package info.mastera.practice.parent_child_relationship;
+package info.mastera.practice.parent_child_relationship.utils;
 
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.converter.ArgumentConversionException;
